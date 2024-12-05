@@ -1,7 +1,7 @@
 steps:
   # Step 1: Set up the environment for SSH to VM
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['compute', 'ssh', 'ubuntu@asia-south2-c', '--zone=34.131.70.75', '--command=cd /home/ubuntu && git pull && docker-compose down && docker-compose up -d']
+    args: ['compute', 'ssh', 'ubuntu@34.131.70.75', '--zone=asia-south2-c', '--command=cd /home/ubuntu && git pull && docker-compose down && docker-compose up -d']
 options:
   logging: CLOUD_LOGGING_ONLY
 # Timeout (optional, default is 10 minutes)
